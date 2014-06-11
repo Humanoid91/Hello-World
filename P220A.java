@@ -1,5 +1,5 @@
 
-public class P220 {
+public class P220A {
 	public static String getit (String a){
 		StringBuilder b =new StringBuilder("");
 		for(int i=0;i<a.length();i++){
@@ -17,17 +17,16 @@ public class P220 {
 	}
 	public static void main(String[] args) {
 		String d ="Fa";
-		for(int j=1;j<8;j++){
+		for(int j=1;j<10;j++){
 			d=getit(d);
-			//System.out.println(d+":"+j);
+			System.out.println(d+":"+j);
 			
-		}
 		
 		
 			long count =0;
 			int flag =3;
 			int x=0,y=0;
-			for(int i=0;i<1000;i++){
+			for(int i=0;i<d.length();i++){
 				if(d.charAt(i)=='F'){
 					switch(flag){
 					case 1: x+=1;break;
@@ -36,9 +35,6 @@ public class P220 {
 					case 4: y-=1;break;
 					}
 					count+=1;
-					if(count==65){
-						break;
-					}
 				}
 				else if(d.charAt(i)=='L'){
 					switch(flag){
@@ -57,10 +53,12 @@ public class P220 {
 					}
 				}
 			}
-			//System.out.println(x+":"+y+":"+flag+":"+count+":"+d.length()+":"+j);
+			System.out.println(x+":"+y+":"+flag+":"+count+":"+d.length()+":"+j);
 			
-		//}
-			System.out.println(x+":"+y+":"+flag);
+		}
+			//System.out.println(x+":"+y);
 	}
 
 } 
+
+
